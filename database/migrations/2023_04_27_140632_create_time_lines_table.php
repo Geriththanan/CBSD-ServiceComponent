@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('time_lines', function (Blueprint $table) {
             $table->id();
+            $table->string('title',255);
+            $table->string('description',255);
             $table->timestamps();
         });
     }
