@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CardController1;
+use App\Http\Controllers\CardController2;
 use App\Http\Controllers\TimeLineController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
