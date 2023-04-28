@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\TimeLine;
 use App\Http\Requests\StoreTimeLineRequest;
 use App\Http\Requests\UpdateTimeLineRequest;
+use App\Http\Resources\TimeLineResource;
 
 class TimeLineController extends Controller
 {
@@ -13,7 +14,8 @@ class TimeLineController extends Controller
      */
     public function index()
     {
-        //
+        $timelines = TimeLine::get();
+        return (["timeline" => TimeLineResource::collection($timelines)]);
     }
 
     /**
